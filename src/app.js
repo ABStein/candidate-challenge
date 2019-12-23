@@ -1,4 +1,5 @@
 const express = require('express');
+const randomUser = require('../utils/randomUser')
 
 const app = express();
 
