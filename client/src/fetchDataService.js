@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = 'http://localhost:3000/candidate_challenge/fetch-data';
+const url = 'http://localhost:3000/candidate/fetch-data';
 
 class FetchDataService {
     // GET fetchData

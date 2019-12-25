@@ -6,11 +6,11 @@ const app = express();
 
 //Middlewares
 
-// Middleware that allows cors requests to anyone and prevent cors errors
+// Middleware that enables all CORS requests
 app.use(cors())
 
 // fetch-data router
-app.use('/candidate_challenge', fetchDataRouter);
+app.use('/candidate', fetchDataRouter);
 
 // for developement
 app.listen(3000, () => {

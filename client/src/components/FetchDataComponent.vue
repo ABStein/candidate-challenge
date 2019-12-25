@@ -1,15 +1,16 @@
 <template>
-  <div class="container">
-    <h1>Candidate Data</h1>
-    <hr>
+  <div class="bg bg-white rounded-lg p-6 candidate-container">
     <p class="error" v-if="error">{{ error }}</p>
-    <div class="candidate-container">
-      <div class="candidate">
-        <ul> Candidate name: {{ candidate.name }} </ul>
-        <ul> Candidate email: {{ candidate.email }} </ul>
-        <img v-bind:src="candidate.photo">
-        <ul> Candidate Birthday: {{ candidate.birthday }} </ul>
-      </div>
+    <div>
+      <img class="rounded-full mx-auto w-20 h-20" v-bind:src="candidate.photo">
+    </div>
+    <div class="text-lg text-center">
+      {{ candidate.name }} 
+    </div>
+    <div class="text-gray-600 text-center">
+      {{ candidate.email }}
+      <br>
+      {{ candidate.birthday }}
     </div>
   </div>
 </template>
@@ -35,19 +36,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style>
+
 </style>

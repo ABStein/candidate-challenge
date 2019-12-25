@@ -11,7 +11,7 @@ const fetchData = (req, res) => {
             })
         }
         
-        const birthday = moment(response.body.results[0].dob.date).format('MMMM Do YYYY')
+        const birthday = moment(response.body.results[0].dob.date).format('MMMM Do, YYYY')
         return res.send({
             name: `${response.body.results[0].name.title} ${response.body.results[0].name.first} ${response.body.results[0].name.last}`,
             email: `${response.body.results[0].email}`,
@@ -20,7 +20,6 @@ const fetchData = (req, res) => {
         })
     })
 }
-
 
 module.exports = {
     fetchData
