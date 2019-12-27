@@ -18,10 +18,9 @@ describe('Testing fetchData API', function() {
         sandbox.restore();
     });
 
-    it('should hit the api', function() {
+    it('should hit the api', async function() {
         const req = mockRequest({});
-        const response = fetchDataMock.fetchData(req, res);
+        const response = await fetchDataMock.fetchData(req, res);
         console.log('This is response', response);
-        expect(response).to(Object);
     });
 })

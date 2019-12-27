@@ -4,3 +4,4 @@
 --reporter spec
 --require ./test/bootstrap.js
 --ui bdd
+--timeout 9999

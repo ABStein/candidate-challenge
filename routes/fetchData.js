@@ -5,7 +5,11 @@ const fetchDataController = require('../controllers/fetchData');
 // fetch data route
 router.get(
     '/fetch-data',
-    (req, res) => fetchDataController.fetchData(req, res),
+    async (req, res) => fetchDataController.fetchData(req, res),
 );
 
+
 module.exports = router;
+
+
+// (req, res) => fetchDataController.fetchData(req, res),
