@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import FetchDataComponent from './components/FetchDataComponent.vue'
 
 export default {
   name: 'app',
   components: {
-    FetchDataComponent
+    // To help load JS faster in the browser
+    FetchDataComponent: () => import('./components/FetchDataComponent.vue')
   }
 }
 </script>

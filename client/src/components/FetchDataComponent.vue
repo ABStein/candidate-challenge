@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import FetchDataService from '../fetchDataService';
+import FetchDataService from '../services/fetchDataService';
 export default {
   name: 'FetchDataComponent',
   data() {
