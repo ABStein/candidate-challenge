@@ -16,6 +16,6 @@ export default {
 </script>
 
 
-<style src="./assets/css/tailwind.css">
+<style src="../public/css/tailwind.css">
 
 </style>

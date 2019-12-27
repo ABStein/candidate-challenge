@@ -21,7 +21,7 @@ To get things up and running locally it will require two terminal sessions.
     
 1) First navigate to the client folder, path should be `/candidate-challenge/client` and run `npm run serve`
 
-2) Open a new terminal and and cd back out off teh client folder to be in the root of the app `/candidate-challenge` and run `nodemon app.js`
+2) Open a new terminal and and cd back out of the client folder to be in the root of the app `/candidate-challenge` and run `nodemon app.js`
 
 ### Endpoints
 
@@ -44,7 +44,7 @@ Hitting this endpoint will fetch data from the https://randomuser.me/api API and
 }
 ```
 
-If the endpoint is hit with an improper path like `/candidate/ftch-data the response will be a 404
+If the endpoint is hit with an improper path like `/candidate/ftch-data` the response will be a 404
 
 ```
 {
