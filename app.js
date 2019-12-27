@@ -1,5 +1,6 @@
 const express = require('express');
-const cors = require('cors')
+const cors = require('cors');
+const statusCodes = require('http-status-codes');
 const fetchDataRouter = require('./routes/fetchData');
 
 const app = express();
@@ -11,6 +12,14 @@ app.use(cors())
 
 // fetch-data router
 app.use('/candidate', fetchDataRouter);
+
+// 404 error handler
+app.use((req, res) => {
+    res.status(statusCodes.NOT_FOUND).json({
+    code: statusCodes.NOT_FOUND,
+    message: 'The requested resource does not exist',
+    });
+});
 
 // for developement
 app.listen(3000, () => {
