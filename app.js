@@ -11,7 +11,7 @@ const app = express();
 app.use(cors())
 
 // fetch-data router
-app.use('/candidate', fetchDataRouter);
+app.use('/fetch-data', fetchDataRouter);
 
 // 404 error handler
 app.use((req, res) => {
