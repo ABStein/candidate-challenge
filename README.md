@@ -55,7 +55,7 @@ If the endpoint is hit with an improper path like `/candidate/ftch-data` the res
 
 ### Unit tests 
 
-To run the unit test(s) for the api
+To run the unit tests for the api
 
 ```
 npm run test

@@ -1,4 +1,4 @@
-const fetchDataController = require('../controllers/fetchData')
+const fetchDataController = require('../../controllers/fetchData')
 const { mockRequest, mockResponse } = require('mock-req-res');
 const statusCodes = require('http-status-codes');
 
