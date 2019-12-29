@@ -1,5 +1,6 @@
-const fetchDataMock = require('../controllers/fetchData')
+const fetchDataController = require('../controllers/fetchData')
 const { mockRequest, mockResponse } = require('mock-req-res');
+const statusCodes = require('http-status-codes');
 
 
 describe('Testing fetchData API', function() {
@@ -18,9 +19,21 @@ describe('Testing fetchData API', function() {
         sandbox.restore();
     });
 
-    it('should hit the api', async function() {
+    it('should hit the api and get a 200', async function() {
         const req = mockRequest({});
-        const response = await fetchDataMock.fetchData(req, res);
-        console.log('This is response', response);
+        
+        await fetchDataController.fetchData(req, res);
+        expect(res.status).to.have.been.calledOnceWith(statusCodes.OK);       
+    });
+
+    it('should check that response has the correct properties', async function() {
+        const req = mockRequest({});
+        
+        const response = await fetchDataController.fetchData(req, res);
+        expect(res.status).to.have.been.calledOnceWith(statusCodes.OK); 
+        expect(response).to.have.property('name');
+        expect(response).to.have.property('email');
+        expect(response).to.have.property('photo');
+        expect(response).to.have.property('birthday');
     });
 })

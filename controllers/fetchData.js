@@ -1,5 +1,6 @@
 const request = require('request')
 const moment = require('moment')
+const statusCodes = require('http-status-codes')
    
 
 const fetchData = (req, res) => {
@@ -21,7 +22,7 @@ const fetchData = (req, res) => {
                 photo: `${response.body.results[0].picture.thumbnail}`,
                 birthday: `${birthday}`,
             }
-            res.json(tempResponse)
+            res.status(statusCodes.OK).json(tempResponse)
             resolve(tempResponse)
         })
     })
