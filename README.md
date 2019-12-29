@@ -94,7 +94,7 @@ For me the choice was obvious for the frontend. Vue.js is a powerful, lightwiegh
 
 I used tailwind.css for the great documentation as well as the ability to maintain unformity of the components without having to write a ton of css leading to faster development.
 
-#### Including two package.json's and package-lock.json's for teh client and the backend
+#### Including two package.json's and package-lock.json's for the client and the backend
 
 I felt that this was the better approach to have a microservice layout, as well as for ease of updating in the future vs a monolithic approach with just one.
 

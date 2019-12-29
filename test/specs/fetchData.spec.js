@@ -7,10 +7,7 @@ describe('Testing fetchData API', function() {
     const sandbox = sinon.createSandbox();
     let res;
 
-    // need to include mockresponse mockrequest 
-
     beforeEach(function() {
-        // dataMock = sandbox.mock(fetchData);
         res = mockResponse();
     });
 
@@ -30,10 +27,7 @@ describe('Testing fetchData API', function() {
         const req = mockRequest({});
         
         const response = await fetchDataController.fetchData(req, res);
-        expect(res.status).to.have.been.calledOnceWith(statusCodes.OK); 
-        expect(response).to.have.property('name');
-        expect(response).to.have.property('email');
-        expect(response).to.have.property('photo');
-        expect(response).to.have.property('birthday');
+        expect(res.status).to.have.been.calledOnceWith(statusCodes.OK);
+        expect(response).that.includes.all.keys('name', 'email', 'photo', 'birthday');
     });
 })

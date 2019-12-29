@@ -1,6 +1,17 @@
 const request = require('request')
 const moment = require('moment')
 const statusCodes = require('http-status-codes')
+
+/**
+ * This function will make an API call using the request npm package, retrieves the repsonse, 
+ * and concatenates it, and sends it back through the newly created endpoint /fetch-data.
+ * @param {String} url Consists of the url that is being used to make an http request. 
+ * @param {String} birthday Concatenated version, with the use of moment for formatting, of the birthday retrieved from the randomuser API.
+ * 
+ * @returns {Object} Object that includes the concatenated version of the results retrieved from the randomuser API.
+ * If however there is server error that is recieved from the API than a simple object with a message that the server
+ * is down is sent back.
+ */
    
 
 const fetchData = (req, res) => {
