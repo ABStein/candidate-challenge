@@ -28,7 +28,7 @@ To get things up and running locally it will require two terminal sessions.
 There is currently only one endpoint that exists in this project.
 
 ```
-GET /candidate/fetch-data
+GET /fetch-data
 
 ```
 
@@ -44,7 +44,7 @@ Hitting this endpoint will fetch data from the https://randomuser.me/api API and
 }
 ```
 
-If the endpoint is hit with an improper path like `/candidate/ftch-data` the response will be a 404
+If the endpoint is hit with an improper path like `/ftch-data` the response will be a 404
 
 ```
 {
