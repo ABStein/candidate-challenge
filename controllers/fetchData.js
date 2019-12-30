@@ -22,7 +22,7 @@ const fetchData = (req, res) => {
               	const tempFailResponse = {
                     message: 'Unable to connect to the server',
                 };
-                res.send(tempFailResponse);
+                res.status(statusCodes.NOT_FOUND).json(tempFailResponse);
                 resolve(tempFailResponse);
             }
 
